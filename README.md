@@ -5,6 +5,7 @@ A letter-by-letter word guessing game application made utilizing Java and OpenFX
 * [General Info](#general-info)
 * [Technologies](#technologies)
 * [Possible Updates](#possible-updates)
+* [Launch](#launch)
 
 ## General Info
 
@@ -48,9 +49,13 @@ An object used to handle all the actual game-data, the mystery word, what parts 
 
 ## Technologies
 Used to create Guess Word:
-* JDK 14.0.2
-* OpenJFX 14.0.2.1
+* JDK 15.0.1
+* Apache Maven 3.6.3
+* OpenJFX 15.0.1
 * SceneBuilder 11.0.1
+
+Used to package executable file:
+* Launch4j 3.12
 
 ## Possible Updates
 Here is a list of bug fixes, changes, or new additions that may come:
@@ -58,3 +63,6 @@ Here is a list of bug fixes, changes, or new additions that may come:
 * Consolidate each difficulty's word list into one selectedWord list and remove its declaration in CreateGame
 * CreateGame can be split into more methods to prevent difficulty-based code repetition.
 * Create a disable start menu and enable in-game menu function to remove repeating code when creating and loading games
+
+## Launch
+To run the game project; download, unzip, and run "Guess Word Game.exe" inside the project folder.
