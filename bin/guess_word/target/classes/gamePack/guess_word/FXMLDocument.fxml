@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="gamePack.guess_word.FXMLDocumentController">
+   <children>
+      <Pane fx:id="pne_StartMenu" layoutX="49.0" layoutY="206.0">
+         <children>
+            <Slider fx:id="sld_Difficulty" layoutX="157.0" layoutY="60.0" onMouseReleased="#adjustDifficulty" prefHeight="25.0" prefWidth="191.0" />
+            <Label fx:id="lbl_Difficulty" alignment="CENTER_RIGHT" layoutY="57.0" prefHeight="32.0" prefWidth="135.0" text="Easy">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_CreateGame" mnemonicParsing="false" onAction="#createGame" prefHeight="44.0" prefWidth="249.0" text="Create Game">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Load" layoutX="274.0" mnemonicParsing="false" onAction="#loadGame" text="Load">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="pne_Game" disable="true" layoutX="14.0" layoutY="14.0" prefHeight="474.0" prefWidth="421.0" visible="false">
+         <children>
+            <Label fx:id="lbl_MysteryWord" alignment="CENTER" layoutX="39.0" layoutY="63.0" prefHeight="89.0" prefWidth="348.0" text="__________">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="152.0" text="Misses Remaining: ">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_Guesses" alignment="CENTER" contentDisplay="CENTER" layoutX="277.0" layoutY="152.0" prefHeight="30.0" prefWidth="35.0" text="0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_GuessedLetters" layoutX="176.0" layoutY="214.0" prefHeight="65.0" prefWidth="229.0" text="----------" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="235.0" text="Guessed Letters:">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_Guess" layoutX="257.0" layoutY="285.0" mnemonicParsing="false" onAction="#enterGuess" text="Guess">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txt_GuessInput" layoutX="103.0" layoutY="285.0" prefHeight="65.0" prefWidth="74.0" style="-fx-font-size: 30;" />
+            <Button fx:id="btn_Save" layoutX="157.0" layoutY="372.0" mnemonicParsing="false" onAction="#saveGame" prefHeight="44.0" prefWidth="135.0" text="Save">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Quit" layoutX="338.0" layoutY="416.0" mnemonicParsing="false" onAction="#quitGame" text="Quit">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Return" layoutX="157.0" layoutY="372.0" mnemonicParsing="false" onAction="#returnToStart" prefHeight="44.0" prefWidth="135.0" text="Return" visible="false">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="lbl_InvInputText" layoutX="42.0" layoutY="350.0" prefHeight="17.0" prefWidth="229.0" text="Invalid. Input one unique letter." textFill="RED" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_EndResult" alignment="CENTER" layoutX="98.0" layoutY="14.0" prefHeight="58.0" prefWidth="229.0" text="YOU _____!" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox fx:id="hbx_LoadGame" disable="true" layoutX="14.0" layoutY="314.0" prefHeight="174.0" prefWidth="421.0" visible="false">
+         <children>
+            <Label prefHeight="25.0" prefWidth="135.0" text="Saved Games:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ListView fx:id="ltv_Saves" prefHeight="174.0" prefWidth="231.0" />
+            <Button fx:id="btn_LoadSelected" mnemonicParsing="false" onAction="#loadSelected" text="Load">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
