@@ -401,7 +401,10 @@ public class FXMLDocumentController
     {
         pne_Game.setVisible(false);
         
+        lbl_InvInputText.setVisible(false);
+        
         lbl_EndResult.setVisible(false);
+        txt_GuessInput.setText("");
         
         pne_StartMenu.setDisable(false);
         pne_Game.setDisable(true);

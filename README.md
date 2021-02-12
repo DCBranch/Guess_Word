@@ -3,6 +3,15 @@ A letter-by-letter word guessing game application made utilizing Java and OpenFX
 
 ## Table of Contents
 * [General Info](#general-info)
+ * [Game Description](#game-description)
+ * [Design](#design)
+ * [Methodology](#methodology)
+  * [Main Class](#main-class)
+  * [FXML Document](#fxml-document)
+  * [FXML Document Controller](#fxml-document-controller)
+   * [Member Variables](#member-variables)
+   * [Methods](#methods)
+  * [Game](#game)
 * [Technologies](#technologies)
 * [Possible Updates](#possible-updates)
 * [Launch](#launch)
